@@ -20,6 +20,8 @@
 <body>
 <div class="form">
       
+	  
+	  <!-- Register into database-->
       <ul class="tab-group">
         <li class="tab active"><a href="#signup">Sign Up</a></li>
         <li class="tab"><a href="#login">Log In</a></li>
@@ -66,6 +68,8 @@
 
         </div>
         
+		
+		<!-- Login using database account-->
         <div id="login">   
           <h1>Welcome Back!</h1>
           
@@ -92,9 +96,9 @@
 
         </div>
         
-      </div><!-- tab-content -->
+      </div>
       
-</div> <!-- /form -->
+</div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src="js/index.js"></script>
 </body>
