@@ -780,3 +780,10 @@ col.collapsed { padding: 0; }
 }
 
 /*demo page search bar*/
+
+/*itemdetail*/
+.smallimg{
+    width:110px;
+    height:110px;
+
+}
