@@ -31,7 +31,7 @@
         <div id="signup">   
           <h1>Sign Up for Free</h1>
           
-          <form action="/" method="post">
+          <form action="register.php" method="post">
           
             <div class="field-wrap">
               <label>
@@ -44,7 +44,7 @@
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="email" required autocomplete="off" id="email" name="email"/>
           </div>
           
           <div class="field-wrap">

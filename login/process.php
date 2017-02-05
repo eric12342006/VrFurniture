@@ -8,9 +8,9 @@
 
 	
 	include_once 'conn.php';
-	mysql_select_db("login");
+	mysql_select_db("vr");
 	
-	$result = mysql_query("select * from user where username = '$username' and password = '$password'") 
+	$result = mysql_query("select * from users where username = '$username' and password = '$password'") 
 				or die("Failed to query database".mysql_error());
 	$row = mysql_fetch_array($result);
 	
