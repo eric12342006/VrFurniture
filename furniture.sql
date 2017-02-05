@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2017-02-04 11:21:36
+-- 產生時間： 2017-02-05 16:06:12
 -- 伺服器版本: 10.1.10-MariaDB
 -- PHP 版本： 5.6.19
 
@@ -57,9 +57,7 @@ INSERT INTO `furniture` (`ID`, `name`, `price`, `designer`, `category`, `desc`, 
 ('tb1', 'Coffe_table', 0, '', '', '', 'white'),
 ('tb2', 'Table', 0, '', '', '', 'white'),
 ('tb3', 'table-low-1', 0, '', '', '', 'black'),
-('tb4', 'glass_table', 0, '', '', '', ''),
-('tv1', 'TV', 0, '', '', '', ''),
-('tv2', 'tv1', 0, '', '', '', '');
+('tb4', 'glass_table', 0, '', '', '', '');
 
 --
 -- 已匯出資料表的索引
