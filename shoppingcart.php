@@ -5,11 +5,12 @@
 		var name = id;
 		window.location.href='delcart.php';
 	}
-</script>
-<script>
 	function order(id){
 		alert(id);
 		window.location.href='orderone.php';
+	}
+	function orderall(){
+		window.location.href='orderall.php';
 	}
 </script>
 <?php
@@ -59,6 +60,9 @@ echo "<td>".$row['quantity']."</td>";
 echo "</tr>";
 }
 echo "</table>";
-
+?>
+<br/>
+<input type="button" value="Order All" onclick="orderall()">
+<?php
 mysqli_close($con);
 ?>
