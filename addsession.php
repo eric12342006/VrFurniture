@@ -5,6 +5,7 @@
 		$_SESSION['image'] = "img/Furniture_ges1/bed1/2.PNG";
 		
 ?>
+
 <?php	
 		if(isset($_SESSION['user'])){
 ?>

@@ -21,10 +21,10 @@
 		if($check){
 			$quantity++;
 			mysqli_query($con,"update cart set quantity = '$quantity'");
-			header("Location:index.html");
+			header("Location:index_.html");
 		}else{
 			$q = mysqli_query($con,"insert into cart(username,p_name,price,image,quantity) values('$username','$productname','$price','$image',1)");
-			header("Location:index.html");
+			header("Location:index_.html");
 		}
 	}else{
 		?>
