@@ -13,12 +13,13 @@
 	$q = mysqli_query($con,"insert into users(username,password,email) values('$user','$password','$email')");
 
 	if($q){
-		echo "successful";
+?>
+		<script type="text/javascript">
+			alert("Register successful!");
+			window.location.href = "login.php";
+		</script>
+<?php
 	}else{
 		echo "not allow";
 	}
-
-
-
-
 ?>
