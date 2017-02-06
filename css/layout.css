@@ -271,8 +271,8 @@ ul#nav li.active a { color: #11ABB0; }
 
 #services {
    background: #1b1e21 url(../images/patterns/servicesbg.png);
-   padding-top: 156px;
-   padding-bottom: 120px;
+   padding-top: 100px;
+   padding-bottom: 50px;
    color: #4E565F;
 }
 
@@ -310,8 +310,8 @@ ul#nav li.active a { color: #11ABB0; }
 
 #portfolio {
    background: #f5f5f5 url(../images/patterns/grey.png);
-   padding-top: 156px;
-   padding-bottom: 120px;
+   padding-top: 70px;
+   padding-bottom: 50px;
 }
 #portfolio .section-head h2 { color: #0f9095; }
 #portfolio .section-head p.desc { color: #999999; }
@@ -430,8 +430,8 @@ ul#nav li.active a { color: #11ABB0; }
 
 #about {
    background: #1b1e21 url(../images/patterns/servicesbg.png);
-   padding-top: 156px;
-   padding-bottom: 144px;
+   padding-top: 100px;
+   padding-bottom: 50px;
    color: #A3A3A3;
 }
 #about .section-head h2,
@@ -544,7 +544,7 @@ ul#nav li.active a { color: #11ABB0; }
 #contact p {  }
 
 /* contact form */
-#contact form { margin-bottom: 30px; }
+#contact form { margin-bottom: 15px; }
 
 #contact label {
    font: 15px/24px opensans-semibold, sans-serif;
@@ -604,8 +604,8 @@ ul#nav li.active a { color: #11ABB0; }
 #message-warning, #message-success {
    display: none;
 	background: #151719;
-	padding: 24px 24px;
-	margin-bottom: 36px;
+	padding: 12px 12px;
+	margin-bottom: 24px;
    width: 88%;
 }
 #message-warning { color: #D72828; }
@@ -1054,7 +1054,7 @@ footer .social-links li:first-child { margin-left: 0; }
 
    /* adjust sections padding top */
    #services, #portfolio,
-   #journal, #about { padding-top: 120px; }
+   #journal, #about { padding-top: 80px; }
 
    /* adjust font size */
    .intro, .testimonies .client-cite { font-size: 18px; }
