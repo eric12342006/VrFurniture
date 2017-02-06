@@ -9,9 +9,8 @@
 
 <script>
 	function del(id){
-		alert(id);
 		var name = id;
-		window.location.href='delcart.php';
+		window.location.href = "delcart.php?w1=" + id;
 	}
 	function order(id){
 		alert(id);
