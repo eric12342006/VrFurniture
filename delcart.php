@@ -18,11 +18,11 @@
 		
 		if($quantity == 1){
 			mysqli_query($con,"delete from cart where p_name= '$productname'");
-			header("Location:index.html");
+			header("Location:shoppingcart.php");
 		}else{
 			$quantity--;
 			mysqli_query($con,"update cart set quantity= '$quantity' where p_name= '$productname'");
-			header("Location:index.html");
+			header("Location:shoppingcart.php");
 		}
 
 

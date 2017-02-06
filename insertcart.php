@@ -1,3 +1,4 @@
+
 <?php
 	session_start();
 	$con = mysqli_connect("localhost","root","");
@@ -20,16 +21,17 @@
 		if($check){
 			$quantity++;
 			mysqli_query($con,"update cart set quantity = '$quantity'");
-			header("Location:index.html");
+			header("Location:index_.html");
 		}else{
 			$q = mysqli_query($con,"insert into cart(username,p_name,price,image,quantity) values('$username','$productname','$price','$image',1)");
-			header("Location:index.html");
+			header("Location:index_.html");
 		}
 	}else{
-		header("Location:login.php");
+		?>
+		<script type="text/javascript">
+			alert("Please login first");
+			window.location.href = "login/login.php";
+		</script>
+	<?php
 	}
-
-
-
-
 ?>

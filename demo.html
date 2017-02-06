@@ -17,6 +17,20 @@
 	font:14px/24px opensans-regular, sans-serif;
 }
 </style>
+<script>
+	function search(){
+		var x = document.getElementById('key').value;
+		var blue = "blue sofa";
+		var red = "red sofa";
+		if(x == blue){
+			window.location.href = "blog-single.html";
+		}else if(x == red){
+			window.location.href = "sofa1.html";
+		}else{
+			alert("Do not have required furniture!");
+		}
+	}
+</script>
 <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
 <![endif]-->
@@ -41,8 +55,8 @@
     <div class="col full">
       <h2>Style Demo</h2>
       <p class="desc">These are some of the furnitures available.
-        <input type="submit" class="demobutton" value="submit">
-        <input type="text" class="searchbar" placeholder="Search..">
+        <input type="button" class="demobutton" value="submit" onclick="search()">
+        <input type="text" id="key" class="searchbar" placeholder="Search..">
 
       </p>
       <hr>

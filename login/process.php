@@ -19,7 +19,7 @@
 	$row = mysqli_fetch_array($q);
 	
 	if($row['username'] == $username && $row['password'] == $password){
-		header("Location:../index.html");
+		header("Location:../index_.html");
 		?>
 		 <script type="text/javascript">
 			alert("message successfully sent"); 

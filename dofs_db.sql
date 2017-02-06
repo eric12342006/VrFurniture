@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2017-02-04 12:16:18
+-- 產生時間： 2017-02-06 16:50:30
 -- 伺服器版本: 10.1.10-MariaDB
 -- PHP 版本： 5.6.19
 
@@ -27,10 +27,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `designfurniturelist` (
-  `design_ID` int(20) NOT NULL,
+  `room_ID` int(20) NOT NULL,
   `furniture_ID` varchar(20) NOT NULL,
-  `location` int(11) NOT NULL,
-  `rotation` int(11) NOT NULL
+  `location_x` float NOT NULL,
+  `location_z` float NOT NULL,
+  `rotation_y` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -42,37 +43,42 @@ CREATE TABLE `designfurniturelist` (
 CREATE TABLE `furniture` (
   `ID` varchar(20) NOT NULL,
   `name` varchar(30) NOT NULL,
-  `price` double NOT NULL,
+  `price` double DEFAULT '100',
   `designer` varchar(30) NOT NULL,
   `category` varchar(20) NOT NULL,
   `desc` varchar(100) NOT NULL,
-  `color` varchar(20) NOT NULL
+  `color` varchar(20) NOT NULL,
+  `src` varchar(70) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- 資料表的匯出資料 `furniture`
 --
 
-INSERT INTO `furniture` (`ID`, `name`, `price`, `designer`, `category`, `desc`, `color`) VALUES
-('bd1', 'Bed', 0, '', '', '', 'white'),
-('cab1', 'sek1', 0, '', '', '', 'wood'),
-('cab2', 'sek2', 0, '', '', '', 'wood'),
-('cab3', 'sek3', 0, '', '', '', ''),
-('cab4', 'sek4', 0, '', '', '', ''),
-('cab5', 'tumba_fur', 0, '', '', '', ''),
-('cab6', 'TV_Shell', 0, '', '', '', 'white'),
-('ch1', 'ArmChair', 1000, '', '', '', 'white'),
-('ch2', 'Cheir', 0, '', '', '', 'white'),
-('ot1', 'Lamp', 0, '', '', '', 'white'),
-('sf1', 'Sofa', 0, '', '', '', 'white'),
-('sf2', 'bed2', 0, '', '', '', 'purplish re'),
-('sf3', 'bed1', 0, '', '', '', 'blue'),
-('tb1', 'Coffe_table', 0, '', '', '', 'white'),
-('tb2', 'Table', 0, '', '', '', 'white'),
-('tb3', 'table-low-1', 0, '', '', '', 'black'),
-('tb4', 'glass_table', 0, '', '', '', ''),
-('tv1', 'TV', 0, '', '', '', ''),
-('tv2', 'tv1', 0, '', '', '', '');
+INSERT INTO `furniture` (`ID`, `name`, `price`, `designer`, `category`, `desc`, `color`, `src`) VALUES
+('bd1', 'Bed', 1000, '', 'bed', '', 'white', 'img\\Gray Furniture Pack\\bed\\bed'),
+('bd2', 'bed2', 100, '', 'bed', '', 'black', ''),
+('cab1', 'sek1', 1000, '', 'cabinet', '', 'wood', ''),
+('cab2', 'sek2', 1000, '', 'cabinet', '', 'wood', ''),
+('cab3', 'sek3', 1000, '', 'cabinet', '', 'wood', ''),
+('cab4', 'sek4', 1000, '', 'cabinet', '', 'wood', ''),
+('cab5', 'tumba_fur', 1000, '', 'cabinet', '', '', ''),
+('cab6', 'TV_Shell', 1000, '', 'cabinet', '', 'white', ''),
+('ch1', 'ArmChair', 1000, '', 'chair', '', 'white', ''),
+('ch2', 'Cheir', 1000, '', 'chair', '', 'white', ''),
+('ch3', 'ch3', 100, '', '', '', '', ''),
+('ch4', 'ch2', 100, '', '', '', 'red', ''),
+('ch5', '7103', 100, '', '', '', 'black', ''),
+('ch6', '7106', 100, '', '', '', '', ''),
+('ot1', 'Lamp', 1000, '', 'other', '', 'white', ''),
+('sf1', 'Sofa', 1000, '', 'Sofa', '', 'white', ''),
+('sf2', 'bed2', 1000, '', 'Sofa', '', 'purplish re', ''),
+('sf3', 'bed1', 1000, '', 'Sofa', '', 'blue', ''),
+('sf4', 'ModernSofa', 100, '', '', '', 'white', ''),
+('tb1', 'Coffe_table', 1000, '', 'Table', '', 'white', ''),
+('tb2', 'Table', 1000, '', 'Table', '', 'white', ''),
+('tb3', 'table-low-1', 1000, '', 'Table', '', 'black', ''),
+('tb4', 'glass_table', 1000, '', 'Table', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -81,10 +87,28 @@ INSERT INTO `furniture` (`ID`, `name`, `price`, `designer`, `category`, `desc`, 
 --
 
 CREATE TABLE `home_design` (
-  `id` int(20) NOT NULL,
-  `design_name` varchar(30) NOT NULL,
-  `designer_name` varchar(30) NOT NULL
+  `room_ID` int(20) NOT NULL,
+  `user_ID` int(10) NOT NULL,
+  `room_name` varchar(30) NOT NULL,
+  `description` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- 資料表的匯出資料 `home_design`
+--
+
+INSERT INTO `home_design` (`room_ID`, `user_ID`, `room_name`, `description`) VALUES
+(0, 1, 'test001', 'GGGGGGGGGGGGGGGGGGGG'),
+(1, 1, 'test002', 'qweqweqweqwe'),
+(2, 1, 'test003', 'werwerwer'),
+(3, 2, 'test004', 'dsaf'),
+(4, 2, 'test005', '352346346356'),
+(5, 3, '5bo', 'dfgfgfgfgff'),
+(6, 3, 'dont go', 'ddddddddddd'),
+(7, 3, 'lover', 'rtret'),
+(8, 4, 'myown', 'sdfgsdfg'),
+(9, 4, 'shit', 'great'),
+(10, 4, 'up', 'wellllllllllllll');
 
 -- --------------------------------------------------------
 
@@ -121,7 +145,7 @@ CREATE TABLE `orderfurniture` (
 
 CREATE TABLE `user` (
   `user_ID` int(10) NOT NULL,
-  `surname` varchar(30) NOT NULL,
+  `name` varchar(30) NOT NULL,
   `gender` tinyint(1) NOT NULL,
   `password` varchar(20) NOT NULL,
   `type` varchar(20) NOT NULL
@@ -135,7 +159,7 @@ CREATE TABLE `user` (
 -- 資料表索引 `designfurniturelist`
 --
 ALTER TABLE `designfurniturelist`
-  ADD PRIMARY KEY (`design_ID`);
+  ADD PRIMARY KEY (`room_ID`,`furniture_ID`);
 
 --
 -- 資料表索引 `furniture`
@@ -147,7 +171,7 @@ ALTER TABLE `furniture`
 -- 資料表索引 `home_design`
 --
 ALTER TABLE `home_design`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`room_ID`);
 
 --
 -- 資料表索引 `order`
