@@ -10,12 +10,13 @@
 	$password = stripcslashes($password);
 
 	
-	include_once 'conn.php';
-	mysql_select_db("vr");
+	$con = mysqli_connect("localhost","root","");
+	mysqli_select_db($con,"vr");
+
 	
-	$result = mysql_query("select * from users where username = '$username' and password = '$password'") 
-				or die("Failed to query database".mysql_error());
-	$row = mysql_fetch_array($result);
+	$q = mysqli_query($con,"select * from users where username = '$username' and password = '$password'") ;
+				
+	$row = mysqli_fetch_array($q);
 	
 	if($row['username'] == $username && $row['password'] == $password){
 		header("Location:../index.html");

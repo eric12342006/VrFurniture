@@ -1,8 +1,31 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="css/shoppingcart.css">
+<link rel="stylesheet" href="css/layout.css">
+</head>
+
 <script>
 	function del(){
 		window.location.href='delcart.php';
 	}
 </script>
+<body>
+<header id="top" class="static">
+  <div class="row">
+    <div class="col full">
+      <div class="logo"> <a href="index.html"><img alt="" src="images/logo.png"></a> </div>
+      <nav id="nav-wrap"> <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a> <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+        <ul id="nav" class="nav">
+          <li><a href="index.html">Site</a></li>
+          <li class="active"><a href="#">Journal</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+</br>
+</br>
 <?php
 session_start();
 $x = 0;
@@ -50,3 +73,6 @@ echo "</table>";
 
 mysqli_close($con);
 ?>
+
+</body>
+</html>
