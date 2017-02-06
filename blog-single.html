@@ -10,6 +10,12 @@
 <script src="js/html5.js"></script>
 <![endif]-->
 <link rel="shortcut icon" href="images/favicon.ico">
+  <script>
+    function insert(){
+      alert('item has been added into shopping cart'); 
+      window.location.href = "insertcart.php";
+    }
+</script>
 </head>
 <body class="narrow">
 <header id="top" class="static">
@@ -38,18 +44,16 @@
     </div>
 
     <div class="col half  add-bottom" style="text-align: center">
-      <h3>Drop Caps</h3>
+     <h3>Blue Sofa</h3>
       ID:00001
       <br/>
-      Category:bed
+      Category:Sofa
       <br/>
       Description:asdajsodh
-      qcnwo43asds
-      adasdsadasdsadasdas
-      dadsdauio4n3o
-      asdsadasd
       <br/>
-      <input type="button" value="Shopping cart">
+	  Price:$1500
+	  <br/>
+      <input type="button" value="Shopping cart" onclick="insert()">
       <input type="button" value="But it now">
 
     </div>
