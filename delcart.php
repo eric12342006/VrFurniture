@@ -31,11 +31,21 @@
 		
 		if($quantity == 1){
 			mysqli_query($con,"delete from cart where p_name= '$del'");
-			header("Location:shoppingcart.php");
+	?>
+		<script type="text/javascript">
+			alert("items is deleted!!!");
+			window.location.href = "shoppingcart.php";
+		</script>
+	<?php	
 		}else{
 			$quantity--;
 			mysqli_query($con,"update cart set quantity= '$quantity' where p_name= '$del'");
-			header("Location:shoppingcart.php");
+	?>
+			<script type="text/javascript">
+				alert("items deleted one!");
+				window.location.href = "shoppingcart.php";
+			</script>
+	<?php
 		}
 
 

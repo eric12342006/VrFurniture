@@ -29,7 +29,10 @@
 		mysqli_query($con,"delete from cart where p_name= '$order'");
 		mysqli_query($con,"insert into orderlist(username,t_price,date,p_name) values('$username','$totalprice','$date','$order')");
 		
-		header("Location:shoppingcart.php");
 	}
 		
 ?>
+		<script type="text/javascript">
+			alert("Order successful!");
+			window.location.href = "index_.html";
+		</script>
