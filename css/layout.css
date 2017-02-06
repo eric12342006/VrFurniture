@@ -639,8 +639,8 @@ ul#nav li.active a { color: #11ABB0; }
 
 .post {
    background: #f5f5f5 url(../images/patterns/grey.png);
-   padding-top: 120px;
-   padding-bottom: 90px;
+   padding-top: 30px;
+   padding-bottom: 20px;
 }
 .post .entry-header {
    position: relative;
@@ -680,7 +680,7 @@ ul#nav li.active a { color: #11ABB0; }
 }
 
 .post .post-meta .date:before { content: "Published"; }
-.post .post-meta .categories:before { content: "Categories"; }
+.post .post-meta .categories:before { content: "Designer"; }
 .post .post-meta .categories a { display: block; }
 
 /* hide sep */
@@ -705,34 +705,7 @@ ul#nav li.active a { color: #11ABB0; }
 }
 .post .post-content .tags a { font-family: opensans-bold, sans-serif; }
 
-/* bio */
-.post .bio {
-   margin-top: 48px;
-   padding-top: 29px;
-   border-top: 1px solid #E0E0E0;
-}
-.post .bio .gravatar {
-   width: 16.66667%;
-   float: left;
-   width: 72px;
-   height: 72px;
-}
-.post .bio .gravatar img {
-   margin-top: 12px;
 
-   -moz-border-radius: 100% 100% 100% 100%;
-	-webkit-border-radius: 100% 100% 100% 100%;
-	-khtml-border-radius: 100% 100% 100% 100%;
-	border-radius: 100% 100% 100% 100%;
-}
-.post .bio .about {
-   width: 83.33333%;
-   float: right;
-}
-.post .bio .about h5 {
-   font: 16px/30px opensans-bold, sans-serif;
-   margin-bottom: 6px;
-}
 
 /* post-nav */
 .post .post-nav {
