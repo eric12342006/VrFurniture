@@ -9,9 +9,8 @@ $x = 0;
 
 if(!isset($_SESSION['user'])) {
 	echo "Please login first";
+	$username = $_SESSION['user'];
 }
-
-$username = $_SESSION['user'];
 
 $con = mysqli_connect("localhost","root","","vr");
 // Check connection

@@ -18,7 +18,7 @@
 	$row = mysql_fetch_array($result);
 	
 	if($row['username'] == $username && $row['password'] == $password){
-		header("Location:../index.html");
+		header("Location:../index_.html");
 		?>
 		 <script type="text/javascript">
 			alert("message successfully sent"); 
