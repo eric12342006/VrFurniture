@@ -1,7 +1,10 @@
 <?php
 
+	session_start();
 	$username = $_POST['user'];
 	$password = $_POST['password'];
+	$_SESSION['user']= $username;
+	
 	
 	$username = stripcslashes($username);
 	$password = stripcslashes($password);
@@ -15,8 +18,15 @@
 	$row = mysql_fetch_array($result);
 	
 	if($row['username'] == $username && $row['password'] == $password){
-		echo "Login success!!!! Welcome ".$row['username'];	
+		header("Location:../index.html");
+		?>
+		 <script type="text/javascript">
+			alert("message successfully sent"); 
+		</script>
+  <?php
+		  exit;
 	}else{
-		echo "Failed to Login";
+		echo '<script type="text/javascript">alert("It works.");</script>';
+		header("Location:login.php");
 	}
 ?>
