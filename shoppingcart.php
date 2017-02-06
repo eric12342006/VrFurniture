@@ -14,7 +14,7 @@
 	}
 	function order(id){
 		alert(id);
-		window.location.href='orderone.php';
+		window.location.href= "orderone.php?w1=" + id;
 	}
 	function orderall(){
 		window.location.href='orderall.php';

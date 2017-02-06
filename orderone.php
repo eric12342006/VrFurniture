@@ -9,17 +9,25 @@
 		$price = $_SESSION['price'];
 		$totalprice;
 		$date = date("Y/m/d");
+		if (isset($_GET["w1"])){
+			 $num = $_GET["w1"];
+		 }
+		 if($num == 1){
+			 $order = "Blue Sofa";
+		 }else{
+			 $order = "Red Sofa";
+		 }
 		
-		$result = mysqli_query($con,"SELECT * FROM cart");
+		$result = mysqli_query($con,"SELECT * FROM cart where p_name ='$order'");
 		while($row = mysqli_fetch_array($result)){
-			if($row['username'] == $username && $row['p_name'] == $productname){
+			if($row['username'] == $username){
 				$quantity = $row['quantity'];
 				$totalprice = $quantity * $price;
 			}
 		}
 		
-		mysqli_query($con,"delete from cart where p_name= '$productname'");
-		mysqli_query($con,"insert into orderlist(username,t_price,date,p_name) values('$username','$totalprice','$date','$productname')");
+		mysqli_query($con,"delete from cart where p_name= '$order'");
+		mysqli_query($con,"insert into orderlist(username,t_price,date,p_name) values('$username','$totalprice','$date','$order')");
 		
 		header("Location:shoppingcart.php");
 	}
