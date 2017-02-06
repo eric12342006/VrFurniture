@@ -8,6 +8,7 @@
 		$productname = $_SESSION['productname'];
 		$price = $_SESSION['price'];
 		$totalprice;
+		$quantity = 1;
 		$date = date("Y/m/d");
 		if (isset($_GET["w1"])){
 			 $num = $_GET["w1"];
@@ -21,8 +22,8 @@
 		$result = mysqli_query($con,"SELECT * FROM cart where p_name ='$order'");
 		while($row = mysqli_fetch_array($result)){
 			if($row['username'] == $username){
-				$quantity = $row['quantity'];
-				$totalprice = $quantity * $price;
+					$quantity = $row['quantity'];
+					$totalprice = $quantity * $price;
 			}
 		}
 		

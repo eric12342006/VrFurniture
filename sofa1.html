@@ -29,6 +29,10 @@
     function insert(){
       window.location.href = "addsession1.php";
     }
+	function order(){
+	  var x = 1;
+	  window.location.href = "addsession.php?w1=" + x;
+	}
 </script>
 </head>
 <body class="narrow">
@@ -68,7 +72,7 @@
 	  Price:$1300
 	  <br/>
       <input type="button" value="Shopping cart" onclick="insert()">
-      <input type="button" value="But it now">
+      <input type="button" value="But it now" onclick="order()">
 
     </div>
 
