@@ -6,9 +6,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
-<!--[if lt IE 9]>
 <script src="js/html5.js"></script>
-<![endif]-->
+
+  <script>
+      function F1() {
+          document.getElementById('changeJPG').src='img/Furniture_ges1/bed1/2.PNG'
+      }
+      function F2() {
+          document.getElementById('changeJPG').src='img/Furniture_ges1/bed1/3.PNG'
+      }
+      function F3() {
+          document.getElementById('changeJPG').src='img/Furniture_ges1/bed1/4.PNG'
+      }
+      function F4() {
+          document.getElementById('changeJPG').src='img/Furniture_ges1/bed1/5.PNG'
+      }
+
+  </script>
+
 <link rel="shortcut icon" href="images/favicon.ico">
   <script>
     function insert(){
@@ -34,12 +49,12 @@
 <article class="post">
   <div class="row">
     <div class="col half  add-bottom">
-      <img src="img/Furniture_ges1/bed1/1.PNG">
+      <img src="img/Furniture_ges1/bed1/1.PNG" id="changeJPG">
       <p>
-        <img src="img/Furniture_ges1/bed1/2.PNG" class="smallimg">
-        <img src="img/Furniture_ges1/bed1/3.PNG" class="smallimg">
-        <img src="img/Furniture_ges1/bed1/4.PNG" class="smallimg">
-        <img src="img/Furniture_ges1/bed1/5.PNG" class="smallimg">
+        <img src="img/Furniture_ges1/bed1/2.PNG" class="smallimg" onclick="F1()">
+        <img src="img/Furniture_ges1/bed1/3.PNG" class="smallimg" onclick="F2()">
+        <img src="img/Furniture_ges1/bed1/4.PNG" class="smallimg" onclick="F3()">
+        <img src="img/Furniture_ges1/bed1/5.PNG" class="smallimg" onclick="F4()">
       </p>
     </div>
 
