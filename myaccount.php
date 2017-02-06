@@ -19,6 +19,7 @@
 			  <li><a href="index_.html">Home</a></li>
 			  <li><a href="password.php">Change Password</a></li>
 			  <li><a href="shoppingcart.php">Shopping Cart</a></li>
+			  <li><a href="myorder.php">My Order</a></li>
 			  <li><a href="login/logout.php">Logout</a></li>
 			</ul>
 		  </nav>
