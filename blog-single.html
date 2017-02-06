@@ -51,7 +51,7 @@
 </header>
 <article class="post">
   <div class="row">
-    <div class="col half  add-bottom">
+    <div class="col half  add-bottom" style="padding-top: 50px;">
       <img src="img/Furniture_ges1/bed1/1.PNG" id="changeJPG">
       <p>
         <img src="img/Furniture_ges1/bed1/2.PNG" class="smallimg" onclick="F1()">
@@ -61,7 +61,7 @@
       </p>
     </div>
 
-    <div class="col half  add-bottom" style="text-align: center">
+    <div class="col half  add-bottom" style="text-align: center;padding-top: 80px;">
      <h3>Blue Sofa</h3>
       ID:00001
       <br/>
@@ -71,8 +71,8 @@
       <br/>
 	  Price:$1500
 	  <br/>
-      <input type="button" value="Shopping cart" onclick="insert()">
-      <input type="button" value="But it now" onclick="order()">
+      <input type="button" class="demobutton1" value="Shopping cart" onclick="insert()">
+      <input type="button" class="demobutton1" value="But it now" onclick="order()">
 
     </div>
 
@@ -91,105 +91,7 @@
     </div>
   </div>
 </article>
-<div id="comments">
-  <div class="row">
-    <div class="col full">
-      <h3>5 Comments</h3>
-      <ol class="commentlist">
-        <li class="depth-1">
-          <div class="avatar"> <img width="50" height="50" class="avatar" src="images/user-01.png" alt=""> </div>
-          <div class="comment-info"> <cite>Itachi Uchiha</cite>
-            <div class="comment-meta">
-              <time class="comment-time" datetime="2045-8-14T23:05">Aug 14, 2045 @ 23:05</time>
-              <span class="sep">/</span><a class="reply" href="#">Reply</a> </div>
-          </div>
-          <div class="comment-text">
-            <p>Adhuc quaerendum est ne, vis ut harum tantas noluisse, id suas iisque mei. Nec te inani ponderum vulputate, facilisi expetenda has et. Iudico dictas scriptorem an vim, ei alia mentitum est, ne has voluptua praesent.</p>
-          </div>
-        </li>
-        <li class="thread-alt depth-1">
-          <div class="avatar"> <img width="50" height="50" class="avatar" src="images/user-03.png" alt=""> </div>
-          <div class="comment-info"> <cite>John Doe</cite>
-            <div class="comment-meta">
-              <time class="comment-time" datetime="2045-8-14T24:05">Aug 14, 2045 @ 24:05</time>
-              <span class="sep">/</span><a class="reply" href="#">Reply</a> </div>
-          </div>
-          <div class="comment-text">
-            <p>Sumo euismod dissentiunt ne sit, ad eos iudico qualisque adversarium, tota falli et mei. Esse euismod urbanitas ut sed, et duo scaevola pericula splendide. Primis veritus contentiones nec ad, nec et tantas semper delicatissimi.</p>
-          </div>
-          <ul class="children">
-            <li class="depth-2">
-              <div class="avatar"> <img width="50" height="50" class="avatar" src="images/user-03.png" alt=""> </div>
-              <div class="comment-info"> <cite>Kakashi Hatake</cite>
-                <div class="comment-meta">
-                  <time class="comment-time" datetime="2045-8-14T25:05">Aug 14, 2045 @ 25:05</time>
-                  <span class="sep">/</span><a class="reply" href="#">Reply</a> </div>
-              </div>
-              <div class="comment-text">
-                <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris</p>
-              </div>
-              <ul class="children">
-                <li class="depth-3">
-                  <div class="avatar"> <img width="50" height="50" class="avatar" src="images/user-03.png" alt=""> </div>
-                  <div class="comment-info"> <cite>John Doe</cite>
-                    <div class="comment-meta">
-                      <time class="comment-time" datetime="2045-8-14T25:15">Aug 14, 2045 @ 25:15</time>
-                      <span class="sep">/</span><a class="reply" href="#">Reply</a> </div>
-                  </div>
-                  <div class="comment-text">
-                    <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
-                  </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="depth-1">
-          <div class="avatar"> <img width="50" height="50" class="avatar" src="images/user-02.png" alt=""> </div>
-          <div class="comment-info"> <cite>Hinata Hyuga</cite>
-            <div class="comment-meta">
-              <time class="comment-time" datetime="2045-8-14T25:15">Aug 14, 2045 @ 25:15</time>
-              <span class="sep">/</span><a class="reply" href="#">Reply</a> </div>
-          </div>
-          <div class="comment-text">
-            <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</p>
-          </div>
-        </li>
-      </ol>
-      <div class="respond">
-        <h3>Leave a Comment</h3>
-        <form name="contactForm" id="contactForm" method="post" action="#">
-          <fieldset>
-            <div>
-              <label for="cName">Name <span class="required">*</span></label>
-              <input name="cName" type="text" id="cName" size="35" value="">
-            </div>
-            <div>
-              <label for="cEmail">Email <span class="required">*</span></label>
-              <input name="cEmail" type="text" id="cEmail" size="35" value="">
-            </div>
-            <div>
-              <label for="cWebsite">Website</label>
-              <input name="cWebsite" type="text" id="cWebsite" size="35" value="">
-            </div>
-            <div>
-              <label  for="cMessage">Message <span class="required">*</span></label>
-              <textarea name="cMessage"  id="cMessage" rows="15" cols="50"></textarea>
-            </div>
-            <button type="submit" class="submit">Submit</button>
-          </fieldset>
-        </form>
-      </div>
-      <div class="journal-bottom-nav">
-        <ul class="bottom-nav">
-          <li><a href="blog.html">See all post</a></li>
-          <span class="sep">|</span>
-          <li><a href="#top">Back to Top<i class="icon-level-up"></i></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+
 <footer>
   <div class="row">
     <div class="col g-7">

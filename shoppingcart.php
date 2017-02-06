@@ -75,13 +75,13 @@ echo "<td>".$row['quantity']."</td>";
 ?>
 <script type="text/javascript">
 	var num = "<?php echo $x; ?>";
-	document.write("<td><input type='button' id='" + num + "' value='Delete' onclick='del(this.id)'></td>");
-	document.write("<td><input type='button' id='" + num + "'  value='Order' onclick='order(this.id)'></td>");
+	document.write("<td><input type='button' class='demobutton1' id='" + num + "'  value='Delete' onclick='del(this.id)  '></td>");
+	document.write("<td><input type='button' class='demobutton1' id='" + num + "'  value='Order' onclick='order(this.id)'></td>");
 </script>
 <?php
 echo "</tr>";
 }
-echo '<tr><td></td><td></td><td></td><td></td><td></td><td><input type="button" value="Order All" onclick="orderall()""></td></tr>';
+echo '<tr><td></td><td></td><td></td><td></td><td></td><td><input type="button" class="demobutton1" value="Order All" onclick="orderall()"></td></tr>';
 echo "</table>";
 ?>
 <br/>

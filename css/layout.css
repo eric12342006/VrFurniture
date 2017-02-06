@@ -1429,3 +1429,31 @@ footer .social-links li:first-child { margin-left: 0; }
 
 
 
+.demobutton {
+    background-color: #11ABB0;
+    float: right;
+    border: 2px;
+    border-radius: 2px;
+    color: white;
+    padding: 6px 15px 6px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 10px;
+}
+.demobutton1 {
+    background-color: #11ABB0;
+
+    border: 2px;
+    border-radius: 2px;
+    color: white;
+    padding: 6px 15px 6px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 10px;
+}
