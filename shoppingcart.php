@@ -1,10 +1,8 @@
-<?php
-	function del(name){
-		alert();
+<script>
+	function del(){
 		window.location.href='delcart.php';
 	}
-?>
-
+</script>
 <?php
 session_start();
 $x = 0;
@@ -41,10 +39,11 @@ echo "<td><img src='".$row['image']. "' alt='' height='100' width='100' /></td> 
 $p_name = $row['p_name'];
 echo "<td>" . $row['p_name'] . "</td>";
 echo "<td>" . $row['price'] . "</td>";
-echo "<td>".$row['quality']."</td>";
+echo "<td>".$row['quantity']."</td>";
 //echo "<td><input type='button' value='Delete' onclick="header('Location:delcart.php)"></td>";
-echo "<td><input type='button' name ='' value='Delete' onclick='del($p_name)'></td>";
-
+?>
+<td><input type='button' name ='' value='Delete' onclick='del()'></td>
+<?php
 echo "</tr>";
 }
 echo "</table>";

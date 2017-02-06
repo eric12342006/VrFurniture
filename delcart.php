@@ -12,16 +12,16 @@
 		while($row = mysqli_fetch_array($result)){
 			if($row['username'] == $username && $row['p_name'] == $productname){
 				$check = true;
-				$quality = $row['quality'];
+				$quantity = $row['quantity'];
 			}
 		}
 		
-		if($quality == 1){
+		if($quantity == 1){
 			mysqli_query($con,"delete from cart where p_name= '$productname'");
 			header("Location:index.html");
 		}else{
-			$quality--;
-			mysqli_query($con,"update cart set quality= '$quality' where p_name= '$productname'");
+			$quantity--;
+			mysqli_query($con,"update cart set quantity= '$quantity' where p_name= '$productname'");
 			header("Location:index.html");
 		}
 
