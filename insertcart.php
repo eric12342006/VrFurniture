@@ -1,3 +1,4 @@
+
 <?php
 	session_start();
 	$con = mysqli_connect("localhost","root","");
@@ -26,10 +27,11 @@
 			header("Location:index.html");
 		}
 	}else{
-		header("Location:login.php");
+		?>
+		<script type="text/javascript">
+			alert("Please login first");
+			window.location.href = "login/login.php";
+		</script>
+	<?php
 	}
-
-
-
-
 ?>
