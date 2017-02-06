@@ -18,6 +18,35 @@ time, mark, audio, video {
     background: transparent;
 }
 
+tr{
+    border-top: 1px solid #C1C3D1;
+    border-bottom-: 1px solid #C1C3D1;
+
+    font-size:16px;
+
+    font-weight:normal;
+    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+tr:hover td {
+    background:#4E5066;
+    color:#FFFFFF;
+    border-top: 1px solid #22262e;
+    border-bottom: 1px solid #22262e;
+}
+
+
+
+
+tr:nth-child(odd) td {
+    background:#EBEBEB;
+}
+
+tr:nth-child(odd):hover td {
+    background:#4E5066;
+}
+
+
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -28,6 +57,18 @@ table {
 
 
 
+
+}
+
+td {
+    background:#FFFFFF;
+    padding:20px;
+    text-align:left;
+    vertical-align:middle;
+    font-weight:300;
+    font-size:18px;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #C1C3D1;
 }
 
 img {
@@ -36,4 +77,12 @@ img {
 }
 header{
     padding-left: 100px;
+}
+
+.cart-title{
+    background: #1B1E24;
+    height:50px;
+    text-align: center;
+    line-height:50px;
+    color:#FFFFFF;
 }

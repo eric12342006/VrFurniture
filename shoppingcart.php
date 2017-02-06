@@ -53,8 +53,8 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
 $result = mysqli_query($con,"SELECT * FROM cart where username='$username'");
 
-echo "<table border='1'>
-<tr>
+echo "<table border='2'>
+<tr class='cart-title'>
 <th>Image</th>
 <th>ProductName</th>
 <th>Price</th>
@@ -81,10 +81,11 @@ echo "<td>".$row['quantity']."</td>";
 <?php
 echo "</tr>";
 }
+echo '<tr><td></td><td></td><td></td><td></td><td></td><td><input type="button" value="Order All" onclick="orderall()""></td></tr>';
 echo "</table>";
 ?>
 <br/>
-<input type="button" value="Order All" onclick="orderall()">
+
 <?php
 mysqli_close($con);
 ?>
